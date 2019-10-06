@@ -37,6 +37,10 @@ public class RegistrationServlet extends HttpServlet {
 		customer.setEmail(email);
 		
 		customerService.create(customer);
+//		Customer customerFromDb = customerService.read(email);
+//		request.setAttribute("customer", customerFromDb);
+		response.sendRedirect("index.jsp");
+		
 
 	}
 

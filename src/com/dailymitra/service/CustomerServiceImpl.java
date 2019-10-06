@@ -33,8 +33,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer read(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return customerDao.read(email);
 	}
 
 	@Override
