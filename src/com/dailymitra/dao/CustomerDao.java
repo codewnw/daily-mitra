@@ -5,6 +5,8 @@ import java.util.List;
 import com.dailymitra.model.Customer;
 
 public interface CustomerDao {
+	void createTable();
+	
 	void create(Customer customer);
 
 	void update(Customer customer);
@@ -14,4 +16,8 @@ public interface CustomerDao {
 	Customer read(String email);
 
 	List<Customer> readAll();
+	
+	void dropTable();
+	
+	void createBaseData();
 }
