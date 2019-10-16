@@ -4,7 +4,7 @@ import com.dailymitra.dao.LoginDao;
 import com.dailymitra.dao.LoginDaoImpl;
 
 public class LoginServiceImpl implements LoginService {
-	
+
 	private LoginDao loginDao;
 
 	public LoginServiceImpl() {
@@ -13,8 +13,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public void create(String email, String password) {
-		// TODO Auto-generated method stub
-
+		loginDao.create(email, password);
 	}
 
 	@Override

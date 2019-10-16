@@ -1,9 +1,29 @@
 package com.dailymitra.model;
 
 public class Customer {
-	
+
 	private String name;
+
+	private String mobile;
 	
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
 	private String email;
 
 	public String getName() {
@@ -24,10 +44,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [name=" + name + ", email=" + email + "]";
+		return "Customer [name=" + name + ", mobile=" + mobile + ", address=" + address + ", email=" + email + "]";
 	}
-	
-	
-	
 
 }

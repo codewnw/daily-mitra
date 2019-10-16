@@ -10,8 +10,15 @@ import com.dailymitra.dao.util.DbUtil;
 public class LoginDaoImpl implements LoginDao {
 
 	public void create(String email, String password) {
-		// TODO Auto-generated method stub
-
+		try (Connection con = DbUtil.getCon();
+				PreparedStatement pstmt = con.prepareStatement("INSERT INTO DAILYMITRA_LOGIN VALUES(?, ?, ?)")) {
+			pstmt.setString(1, email);
+			pstmt.setString(2, password);
+			pstmt.setString(3, "Not Verified");
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void update(String email, String password, String status) {
@@ -43,7 +50,7 @@ public class LoginDaoImpl implements LoginDao {
 	public void createTable() {
 		try (Connection con = DbUtil.getCon(); Statement stmt = con.createStatement()) {
 			stmt.execute("CREATE TABLE " + DbConstant.LOGIN_TABLE
-					+ "(EMAIL VARCHAR(200), PASSWORD VARCHAR(200), STATUS VARCHAR(50))");
+					+ "(EMAIL VARCHAR(200) PRIMARY KEY, PASSWORD VARCHAR(200), STATUS VARCHAR(50))");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

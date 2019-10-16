@@ -39,11 +39,11 @@
   </div>
   <div class="form-group">
     <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" name="street1" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" name="address1" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" name="street2" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -54,7 +54,10 @@
       <label for="inputState">State</label>
       <select id="inputState" name="state" class="form-control">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Kerla">Kerla</option>
       </select>
     </div>
     <div class="form-group col-md-2">
